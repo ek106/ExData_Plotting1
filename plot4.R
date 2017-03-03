@@ -22,13 +22,13 @@ household_subset <- household_power[household_power$Date %in% c("1/2/2007", "2/2
 
 household_subset$timestamp <- strptime(paste(household_subset$Date, household_subset$Time), "%d/%m/%Y %H:%M:%S")
 
-## Enable 4 Graphs on one layout
-
-par(mfrow = c(2,2))
-
 ## Create png file
 
 png("plot4.png", width = 480, height = 480)
+
+## Enable 4 Graphs on one layout
+
+par(mfrow = c(2,2))
 
 ## Create Graph 4
 
